@@ -570,7 +570,7 @@ img {
   padding: 14px 24px;
   text-decoration: none;
   display: block;
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   font-weight: 500;
   transition: var(--transition);
   border-bottom: 1px solid var(--neutral-200);
@@ -636,15 +636,15 @@ img {
   color: var(--brand-600);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-bottom: 12px;
-  padding-bottom: 8px;
+  margin-bottom: 1px;
+  padding-bottom: 1px;
   border-bottom: 1px solid var(--neutral-200);
 }
 
 .dropdown-group a {
   padding: 8px 0 !important;
   border-bottom: none !important;
-  font-size: 0.95rem !important;
+  font-size: 1.4rem !important;
   font-weight: 600 !important;
   color: var(--text-secondary) !important;
 }
@@ -676,7 +676,7 @@ img {
   }
 
   .dropdown-group a {
-    color: #334155 !important;
+    color: #ffffff !important;
   }
 }
 
@@ -800,12 +800,12 @@ img {
     padding: 12px 0 !important;
     margin-top: 8px;
     border-radius: var(--radius-lg);
-    background: rgba(255, 255, 255, 0.35) !important;
+    background: rgb(85 109 160 / 82%) !important;
   }
 
   .nav-dropdown--servicios.is-open .dropdown-content a,
   .nav-dropdown--paciente.is-open .dropdown-content a {
-    color: #0f172a !important;
+    color: #ffffff !important;
     border-bottom-color: rgba(0, 0, 0, 0.08);
   }
 }
@@ -2262,9 +2262,6 @@ footer.footer--light .social-btn:hover {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #5171b27d;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -2276,6 +2273,9 @@ footer.footer--light .social-btn:hover {
     display: flex;
     justify-content: flex-start;
     padding-top: 30%;
+    background: #4d6491e3 !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .nav-link {
@@ -2299,8 +2299,8 @@ footer.footer--light .social-btn:hover {
   .nav-patologias-toggle:hover,
   .nav-servicios-toggle:hover,
   .nav-paciente-toggle:hover {
-    color: #009984;
-    background: rgba(0, 153, 132, 0.1);
+    color: #f5f7f7;
+    background: rgb(0 153 132 / 76%);
   }
 
   /* Glassmorphism for navbar scrolled on mobile */
@@ -2524,29 +2524,33 @@ footer.footer--light .social-btn:hover {
 .modal-overlay {
   position: absolute;
   inset: 0;
-  background: #5171b27d;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  z-index: -1;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 0;
 }
 
 .modal-container {
-  background: #5171b27d;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   width: 100%;
   max-width: 800px;
   max-height: 90vh;
   border-radius: var(--radius-xl);
   position: relative;
+  z-index: 1;
   overflow-y: auto;
   box-shadow: var(--shadow-lg);
+  background: #5171b27d;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transform: scale(0.9) translateY(20px);
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .modal.active .modal-container {
   transform: scale(1) translateY(0);
+  background: #fbfcffcf;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .modal-close {
@@ -2580,9 +2584,7 @@ footer.footer--light .social-btn:hover {
 
 .modal-content {
   padding: 60px 44px;
-  background: #ffffffd4;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: transparent;
 }
 
 /* Loader */
@@ -2912,7 +2914,7 @@ footer.footer--light .social-btn:hover {
   }
 
   .dropdown-group a {
-    color: #334155 !important;
+    color: #ffffff !important;
   }
 
   .dropdown-group a:hover {
