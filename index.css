@@ -1153,15 +1153,17 @@ img {
   flex-direction: column;
   gap: 8px;
   margin-bottom: 24px;
+  width: 100%;
 }
 
 .service-features li {
   font-size: 0.85rem;
   color: var(--text-secondary);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 8px;
+  text-align: left;
 }
 
 .service-features li::before {
@@ -2273,7 +2275,7 @@ footer.footer--light .social-btn:hover {
     display: flex;
     justify-content: flex-start;
     padding-top: 30%;
-    background: #5171b27d !important;
+    background: #526998f0 !important;
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px);
   }
