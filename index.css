@@ -1943,7 +1943,7 @@ img {
   height: 250px;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 5px solid #00B49C;
+  border: 5px solid #0033a0;
   box-shadow: var(--shadow-sm);
 }
 
