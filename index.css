@@ -2273,7 +2273,7 @@ footer.footer--light .social-btn:hover {
     display: flex;
     justify-content: flex-start;
     padding-top: 30%;
-    background: #4d6491e3 !important;
+    background: #5171b27d !important;
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px);
   }
@@ -2548,7 +2548,7 @@ footer.footer--light .social-btn:hover {
 
 .modal.active .modal-container {
   transform: scale(1) translateY(0);
-  background: #fbfcffcf;
+  background: #5171b27d;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -2584,7 +2584,7 @@ footer.footer--light .social-btn:hover {
 
 .modal-content {
   padding: 60px 44px;
-  background: transparent;
+  background: #f5f6fff7;
 }
 
 /* Loader */
