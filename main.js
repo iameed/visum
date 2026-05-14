@@ -421,12 +421,12 @@ const doctorsData = {
 const pacienteInfoData = {
   'agendar': {
     title: 'Agendar Hora',
-    desc: 'Ponemos a su disposición múltiples canales para agendar su cita de la manera más cómoda para usted.',
+    desc: 'Ponemos a su disposición múltiples canales para agendar su Hora de la manera más cómoda para usted.',
     details: [
       'Reserva en línea a través de nuestra plataforma 24/7.',
       'Contacto directo vía WhatsApp para agendamiento rápido.',
       'Atención telefónica personalizada de Lunes a Viernes.',
-      'Recordatorios de cita automáticos vía SMS o correo.'
+      'Recordatorios de Hora automáticos vía SMS o correo.'
     ]
   },
   'presupuesto': {
@@ -564,7 +564,7 @@ const pacienteInfoData = {
     title: 'Información al Paciente',
     desc: 'Todo lo que necesita saber para su atención en nuestra clínica, desde el agendamiento hasta sus derechos legales.',
     details: [
-      'Procesos de agendamiento y confirmación de citas.',
+      'Procesos de agendamiento y confirmación de horas.',
       'Gestión de presupuestos y medios de pago.',
       'Preparación para cirugías y cuidados post-operatorios.',
       'Marco legal de derechos y deberes del paciente.'
@@ -898,7 +898,7 @@ function fetchModalContent(type, id) {
               </div>
               
               <div class="modal-actions">
-                <a href="#contacto" class="btn btn-primary" onclick="closeModal()">Agendar Cita</a>
+                <a href="#contacto" class="btn btn-primary" onclick="closeModal()">Agendar Hora</a>
               </div>
             </div>
           </div>
@@ -1044,21 +1044,27 @@ if (filterTabs && filterWrapper) {
 function initFooterStyleSwitch() {
   const footer = document.querySelector('.footer');
   const styleCheckbox = document.getElementById('footer-style-checkbox');
+  const footerLogoImg = document.getElementById('footer-logo-img');
 
-  if (!footer || !styleCheckbox) return;
+  if (!footer || !styleCheckbox || !footerLogoImg) return;
 
   const savedStyle = localStorage.getItem('visum-footer-style');
   if (savedStyle === 'light') {
     footer.classList.add('footer--light');
     styleCheckbox.checked = true;
+    footerLogoImg.src = 'logo_footer.png';
+  } else {
+    footerLogoImg.src = 'visum.png';
   }
 
   styleCheckbox.addEventListener('change', () => {
     if (styleCheckbox.checked) {
       footer.classList.add('footer--light');
+      footerLogoImg.src = 'logo_footer.png';
       localStorage.setItem('visum-footer-style', 'light');
     } else {
       footer.classList.remove('footer--light');
+      footerLogoImg.src = 'visum.png';
       localStorage.setItem('visum-footer-style', 'corporate');
     }
   });
